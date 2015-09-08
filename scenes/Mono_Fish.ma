@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: Mono_Fish.ma
-//Last modified: Tue, Sep 08, 2015 02:55:23 PM
+//Last modified: Tue, Sep 08, 2015 03:26:02 PM
 //Codeset: 1252
 requires maya "2016";
 currentUnit -l inch -a degree -t film;
@@ -41,7 +41,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
 	setAttr ".coi" 39.40944881889763;
-	setAttr ".ow" 2.6202078411584737;
+	setAttr ".ow" 41.845923750291973;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -50,7 +50,7 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "4DAC72FE-46A5-7615-34D4-F5BC5EA4C366";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.12525851180501232 2.4983870420410601 39.40944881889763 ;
+	setAttr ".t" -type "double3" 1.4057350255334775 0.32541984317874451 39.40944881889763 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "F18AB8B9-43B8-D8AA-DAD5-5F9D462E652E";
 	setAttr -k off ".v" no;
@@ -59,7 +59,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
 	setAttr ".coi" 39.40944881889763;
-	setAttr ".ow" 2.6202078411584737;
+	setAttr ".ow" 22.019929666914347;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
