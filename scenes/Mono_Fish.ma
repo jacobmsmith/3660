@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: Mono_Fish.ma
-//Last modified: Tue, Sep 15, 2015 11:34:07 AM
+//Last modified: Tue, Sep 15, 2015 12:58:10 PM
 //Codeset: 1252
 requires maya "2016";
 currentUnit -l inch -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "2FFBF301-4D8E-D8A8-BDB3-9A810BDA15B1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 48.643296560275687 36.756541346873327 -10.157998485329321 ;
-	setAttr ".r" -type "double3" -38.138352727348753 -620.99999999992178 -2.5444437451708134e-014 ;
+	setAttr ".t" -type "double3" 50.002357963587741 33.78851910893021 -15.399226951637065 ;
+	setAttr ".r" -type "double3" -29.738352727362912 -612.1999999999174 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FE224C1F-457D-0BD0-9D1E-BD8B96EC3878";
 	setAttr -k off ".v" no;
@@ -3752,8 +3752,8 @@ createNode animCurveTU -n "Tail_JNT_scaleZ";
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
 	setAttr -s 5 ".koy[2:4]"  0 0 0;
 select -ne :time1;
-	setAttr ".o" 17;
-	setAttr ".unw" 17;
+	setAttr ".o" 29;
+	setAttr ".unw" 29;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
