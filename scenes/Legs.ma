@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: Legs.ma
-//Last modified: Tue, Sep 22, 2015 01:12:10 PM
+//Last modified: Tue, Sep 22, 2015 03:22:08 PM
 //Codeset: 1252
 requires maya "2016";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "290B5077-4186-66BE-5F5F-83A9811350AE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 38.164474363562519 25.385286639431175 -8.491750656016098 ;
-	setAttr ".r" -type "double3" -24.938352529259436 -3143.800000000027 -2.5444437451708134e-014 ;
+	setAttr ".t" -type "double3" 32.491533999248645 34.294572653682508 -1.6734410388503971 ;
+	setAttr ".r" -type "double3" -40.538352529169117 -3155.7999999998906 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6692FE4C-48B7-9F55-E2BF-6CB5C58A8B34";
 	setAttr -k off ".v" no;
