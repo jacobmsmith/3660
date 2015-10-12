@@ -1,0 +1,10 @@
+setAttr -lock true "pCube1.tx";
+setAttr -lock true "pCube1.ty";
+setAttr -lock true "pCube1.tz";
+
+setAttr -lock true "pCube1.sx";
+setAttr -lock true "pCube1.sy";
+setAttr -lock true "pCube1.sz";
+
+createDisplayLayer -name "layer1" -number 1 -nr;
+// Result: layer1 // 
