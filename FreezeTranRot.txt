@@ -1,0 +1,39 @@
+setAttr -lock true "pCube1.tx";
+setAttr -lock true "pCube1.ty";
+setAttr -lock true "pCube1.tz";
+
+setAttr -lock true "pCube1.sx";
+setAttr -lock true "pCube1.sy";
+setAttr -lock true "pCube1.sz";
+
+createDisplayLayer -name "layer1" -number 1 -nr;
+// Result: layer1 // 
+
+***********************************************
+
+SelectHierarchy;
+string $theJoints[] = `ls -sl`;
+for ($items in $theJoints){
+        setAttr -lock true ($items + ".tx");
+        setAttr -lock true ($items + ".ty");
+        setAttr -lock true ($items + ".tz");
+        setAttr -keyable false -channelBox false ($items + ".tx");
+        setAttr -keyable false -channelBox false ($items + ".ty");
+        setAttr -keyable false -channelBox false ($items + ".tz");
+        setAttr -lock true ($items + ".sx");
+        setAttr -lock true ($items + ".sy");
+        setAttr -lock true ($items + ".sz");
+        setAttr -keyable false -channelBox false ($items + ".sx");
+        setAttr -keyable false -channelBox false ($items + ".sy");
+        setAttr -keyable false -channelBox false ($items + ".sz");
+}
+createDisplayLayer -name "layer1" -number 1 -nr;
+
+*********************************************
+
+joint -p 4 0 -10;
+joint -p 4 0 -5;
+joint -p 4 0 0;
+ikHandle -sj joint1 -ee joint3 -p 2 -w .5;
+circle -ch on -o on -nr 0 1 0 -r 3.674035 ;
+parent nurbsCircle1 ikHandle2;

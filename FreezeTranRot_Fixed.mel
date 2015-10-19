@@ -1,0 +1,22 @@
+//Lock and hide elements you dont want the animators to have access to
+//select all the joints manually
+SelectHierarchy;
+string $theJoints[] = `ls -sl`;
+for ($items in $theJoints){
+    //lock and hide transforming
+        setAttr -lock true ($items + ".tx");
+        setAttr -lock true ($items + ".ty");
+        setAttr -lock true ($items + ".tz");
+        setAttr -keyable false -channelBox false ($items + ".tx");
+        setAttr -keyable false -channelBox false ($items + ".ty");
+        setAttr -keyable false -channelBox false ($items + ".tz");
+        //lock and hide scaleing
+        setAttr -lock true ($items + ".sx");
+        setAttr -lock true ($items + ".sy");
+        setAttr -lock true ($items + ".sz");
+        setAttr -keyable false -channelBox false ($items + ".sx");
+        setAttr -keyable false -channelBox false ($items + ".sy");
+        setAttr -keyable false -channelBox false ($items + ".sz");
+}
+//create a new layer out of the selected
+createDisplayLayer -name "layer1" -number 1 -nr;

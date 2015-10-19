@@ -1,0 +1,9 @@
+joint -p 0 0 0;
+joint -p 0 -5 1;
+joint -p 0 -10 0;
+joint -p 0 -12 2;
+ikHandle -sj joint1 -ee joint3 -p 2 -w .5;
+circle -ch on -o on -nr 0 1 0;
+move -rpr -y -10;
+parent ikHandle1 nurbsCircle1;
+select nurbsCircle1;
